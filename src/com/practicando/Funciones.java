@@ -53,7 +53,7 @@ public class Funciones {
         System.out.println(frase);
     }
 
-    //la funcion ayudara a verificar si la frase ingresada por el usuario termina en punto
+    //la funcion ayudará a verificar si la frase ingresada por el usuario termina en punto
     static boolean verificarPunto(String frase) {
         //se guarda el último caracter en una variable (ultimoCaracter)
 
@@ -61,6 +61,8 @@ public class Funciones {
         //[f][r][a][s][e][ ][e][j][e][m][p ][l ][o ]
         //[0][1][2][3][4][5][6][7][8][9][10][11][12] = length(empienza desde cero, es por eso que se le resta 1) = 13-1 = 12
         // entonces frase.charAt valdria 12
+
+        //para simplificar el codigo se hace la comparacion de la siguiente manera
         return ultimoCaracter == '.';
 
     }
