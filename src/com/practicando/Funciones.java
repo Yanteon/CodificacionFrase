@@ -1,6 +1,5 @@
 package com.practicando;
 
-import jdk.internal.access.JavaIOFileDescriptorAccess;
 
 import java.util.Scanner;
 
