@@ -13,7 +13,7 @@ public class Funciones {
         System.out.println("Ingrese una frase y que esta termine en punto");
         String frase = entrada.nextLine();
 
-
+        //se incluyo el bucle para asegurar que la frase siempre tenga punto al final
         while (!verificarPunto(frase)) {
 
             System.out.println("por favor termine la frase con un punto");
@@ -29,16 +29,17 @@ public class Funciones {
 
     static void codificador(String frase) {
 
-        //la frase se converte a minusculas
+        //la frase se convierte a minúsculas
         String fraseMinusculas = frase.toLowerCase();
 
 
-        //el parametro frase se convierte a un array (vector) para poder cambiar las vocales a otro caracter
+        //el parámetro frase se convierte a un array (vector) para poder cambiar las vocales a otro carácter
         char[] caracteres = fraseMinusculas.toCharArray();
 
-        //se considera menos una posicion del array por el uso de length
+        //se considera menos una posición del array por el uso de length
         for (int i = 0; i <= caracteres.length - 1; i++) {
 
+            //se mejoró la forma de escribir la estructura switch
             switch (caracteres[i]) {
                 case 'a' -> caracteres[i] = '@';
                 case 'e' -> caracteres[i] = '#';
@@ -48,12 +49,12 @@ public class Funciones {
             }
         }
 
-        //se convierte el array a un nuevo String guardandolo en el parametro frase (con esto se guarda la frase modificada)
+        //se convierte el array a un nuevo String guardándolo en el parámetro frase (con esto se guarda la frase modificada)
         frase = new String(caracteres);
         System.out.println(frase);
     }
 
-    //la funcion ayudará a verificar si la frase ingresada por el usuario termina en punto
+    //la función ayudará a verificar si la frase ingresada por el usuario termina en punto
     static boolean verificarPunto(String frase) {
         //se guarda el último caracter en una variable (ultimoCaracter)
 
@@ -62,7 +63,7 @@ public class Funciones {
         //[0][1][2][3][4][5][6][7][8][9][10][11][12] = length(empienza desde cero, es por eso que se le resta 1) = 13-1 = 12
         // entonces frase.charAt valdria 12
 
-        //para simplificar el codigo se hace la comparacion de la siguiente manera
+        //para simplificar el codigo se hace la comparacion de la siguiente manera (ya no se usa if else)
         return ultimoCaracter == '.';
 
     }
